@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>House Details - Homes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+
+<body>
+
+<header>
+  <h1 class="logo">🏡 Homes</h1>
+</header>
+
+<div class="container">
+
+  <div class="house-detail">
+
+    <img id="img" style="width:100%; border-radius:18px;">
+
+    <h2 id="title"></h2>
+    <p id="price"></p>
+    <p id="contact"></p>
+
+    <div id="map" style="height:350px; border-radius:15px;"></div>
+
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+const house = JSON.parse(localStorage.getItem("house"));
+
+if (!house) {
+  document.body.innerHTML = "<h2>No house selected</h2>";
+} else {
+  document.getElementById("img").src = house.image;
+  document.getElementById("title").innerText = house.title;
+  document.getElementById("price").innerText = "💰 " + house.price;
+  document.getElementById("contact").innerText = "📞 " + house.contact;
+
+  const map = L.map('map').setView([house.lat, house.lng], 14);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  L.marker([house.lat, house.lng]).addTo(map)
+    .bindPopup(house.title)
+    .openPopup();
+}
+</script>
+
+</body>
+</html>

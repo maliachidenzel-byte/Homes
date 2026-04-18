@@ -92,3 +92,18 @@ button {
 button:hover {
   background: #0284c7;
 }
+.house-detail {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.house-detail h2 {
+  font-size: 2rem;
+  margin-top: 15px;
+}
+
+.house-detail p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
