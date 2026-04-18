@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homes - Add House</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1 class="logo">🏡 Homes</h1>
+  <p>Add your house and pin location</p>
+</header>
+
+<div class="container">
+
+  <input type="text" id="title" placeholder="House Title">
+  <input type="text" id="price" placeholder="Price">
+  <input type="text" id="contact" placeholder="Contact">
+  <input type="text" id="image" placeholder="Image URL">
+
+  <div id="landlord-map"></div>
+
+  <button onclick="addHouse()">Upload House</button>
+
+</div>
+
+<footer>
+  <p>© 2026 Homes. All rights reserved.</p>
+  <p>Helpline: <a href="tel:+25470838257550">+254 708 38257550</a></p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="landlord.js"></script>
+
+</body>
+</html>

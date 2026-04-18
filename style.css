@@ -1,0 +1,94 @@
+/* BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #eef2f7;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0b1220;
+  }
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* 🌟 FLOATING CARDS GRID */
+#houses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* 🏡 BIG FLOATING CARD */
+.house-card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  transform: translateY(0);
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* FLOAT EFFECT */
+.house-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+.house-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* INFO */
+.house-info {
+  padding: 18px;
+}
+
+.house-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+/* DARK MODE CARD */
+@media (prefers-color-scheme: dark) {
+  .house-card {
+    background: #111827;
+    color: white;
+  }
+}
+
+/* MAP */
+#map, #landlord-map {
+  height: 450px;
+  width: 100%;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* BUTTON */
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: #0ea5e9;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0284c7;
+}
